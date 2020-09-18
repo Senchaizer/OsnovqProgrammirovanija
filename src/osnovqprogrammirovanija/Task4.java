@@ -9,14 +9,6 @@ package osnovqprogrammirovanija;
  *
  * @author user
  */
-public class OsnovqProgrammirovanija {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        Task2 task2 = new Task2();
-        task2.run();
-    }
+class Task4 {
     
 }
