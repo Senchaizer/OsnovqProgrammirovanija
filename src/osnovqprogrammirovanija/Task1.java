@@ -13,15 +13,13 @@ import java.util.Scanner;
  * @author user
  */
 class Task1 {
-Scanner scanner = new Scanner(System.in);
-public void run(){
-        System.out.println("----- Задача 1 ------");
-        System.out.print("Введите число градусов по Цельсию: ");
+    private final Scanner scanner = new Scanner(System.in);
+    public void run(){
+        System.out.println("Цельсия в градусы по Фаренгейту");
+        System.out.println("Введите градусы по Цельсия");
         double gradC = scanner.nextDouble();
-        // решение задачи
-        System.out.print("По Фарингейту это будет: ");
-        double gradF = gradC * 9/5 +32;
+        System.out.println("По фаренгейту это: ");
+        double gradF = gradC * 9 / 5 +32;
         System.out.printf("%.2f%n",gradF);
-        System.out.println("----- конец задачи 1 ------");
     }
 }

@@ -15,34 +15,35 @@ import java.util.Scanner;
  */
 class Task2 {
     public void run(){
-         System.out.println("----- Задача 2 ------");
-         System.out.println("Угадай задуманное число");
+        System.out.println("Угадай задуманное число.");
+        System.out.println("---------------------------");
+        int min = 0;
+        int max = 20;
         Random random = new Random();
-        int myNumber = random.nextInt(10-5+1)+5;
-        System.out.println("Загадано число от 5 до 10: ");
-        System.out.print("Отгадай: ");
+        int myNumber = random.nextInt(max-min+1)+min;
+        System.out.println("Задумано число от "+min+" до "+max+". Угадай!");
         Scanner scanner = new Scanner(System.in);
         int attempt = 1;
         do{
             int gamerNumber = scanner.nextInt();
-            if(myNumber == gamerNumber) {
-        
-        System.out.println("Ты выйграл!");
-        break;
-        }else{
-                if (attempt < 3){
-                System.out.println("Ты  проиграл! Задумано число: "+myNumber); 
+            if(myNumber == gamerNumber){
+                System.out.println("Ты выиграл!");
+                break;
+            }else{
+                if(attempt < 3){
+                    System.out.println("Не угадал, попробуй еще: ");
+                    if(myNumber > gamerNumber){
+                        System.out.println("(Задуманное число больше)");
+                    }else{
+                        System.out.println("(Задуманное число меньше)");
+                    }
                 }else{
-                System.out.println("----- конец задачи 2 ------");
+                    System.out.println("Ты проиграл. Задумано число: "+myNumber);
+                    break;
                 }
-             }
+            }
+            attempt++;
         }while(true);
-        }
-        }
+    }
+}
         
-        
-        
-        
-
-
-
